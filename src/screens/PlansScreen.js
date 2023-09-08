@@ -62,7 +62,7 @@ function PlansScreen() {
 
         if (sessionId){
             //publishable key
-            const stripe = await loadStripe("pk_test_51NnsdUCRt9n8gOKJVF4k3n8DdmiNnSXDXmdJbHVXSi31vUzBPjNnwUnHlg310tthICF0mDvQ2BdUr4BZUDzTrv7k00Vn95bg9S")
+            const stripe = await loadStripe(process.env.REACT_APP_API_KEY)
             stripe.redirectToCheckout({ sessionId })
         }
         
